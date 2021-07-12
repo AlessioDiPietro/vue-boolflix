@@ -2,13 +2,13 @@
   <div>
       <img src="" alt="">
 
-      <h2>title</h2>
+      <h2>{{info.title}}</h2>
 
-      <div>titolo originale</div>
+      <div>{{info.original_title}}</div>
 
-      <div>lingua</div>
+      <div>{{info.original_language}}</div>
 
-      <div>ibms</div>
+      <div>{{info.vote_avarage}}</div>
 
       <!-- info -->
   </div>
@@ -16,7 +16,8 @@
 
 <script>
 export default {
-    name: "contentCard"
+    name: "contentCard",
+    props: ["info"]
 
 }
 </script>

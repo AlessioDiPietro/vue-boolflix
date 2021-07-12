@@ -27,9 +27,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-    .res_area {
-        background-color: grey;
-        min-height: 300px;
-    }
+<style lang="scss">
 </style>
