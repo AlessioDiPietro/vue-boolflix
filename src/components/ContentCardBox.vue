@@ -1,12 +1,15 @@
 <template>
 
   <section>
-      <!-- searchbar -->
-      <SearchBar/>
+      <!-- search bar -->
+      <SearchBar @inputSearch="filterBySearch"/>
+
+      <!-- titolo -->
+      <h1>Ultime Uscite</h1>
+
     <div class="card_box d-flex flex-wrap" v-if="!loadingPage">
-      
       <!-- card-area -->
-      <div v-for="items in itemsList" :key="items.id" class="col-3">
+      <div v-for="items in filtredItems" :key="items.id" class="col-3">
         <ContentCard :info="items"/>
       </div>
     </div>
@@ -35,7 +38,8 @@ export default {
     return{
       apiUrlDesc: "https://api.themoviedb.org/3/discover/movie?api_key=3c2a6196907d164353ad9b7c59139463&language=it-IT&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate",
       loadingPage: true,
-      itemsList: []
+      itemsList: [],
+      filterInput: ""
     }
   },
   created(){
@@ -44,17 +48,28 @@ export default {
   methods: {
     getItemList(){
       axios
-        .get(this.apiUrlDesc)
-        .then(response =>{
-          this.itemsList = response.data.results;
-          this.loadingPage = false;
-          console.log(this.itemsList);
-        })
-      }
+      .get(this.apiUrlDesc)
+      .then(response =>{
+        this.itemsList = response.data.results;
+        this.loadingPage = false;
+        console.log(this.itemsList);
+      })
+    },
+    filterBySearch(searchText){
+      this.filterInput = searchText
+    }
+  },
+  computed: {
+    filtredItems(){
+      return this.itemsList.filter(element => {
+        return element.title.toLowerCase().includes(this.filterInput.toLowerCase())
+      })
     }
     
-
+  }
+    
 }
+
 </script>
 
 <style lang="scss" scoped>
