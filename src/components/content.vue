@@ -1,18 +1,11 @@
 <template>
   <div class="container">
 
-      <!-- searchbar -->
-      <div class="box text-end my-5">
-          <input type="text" placeholder="Inserisci parola chiave..">
-          <button type="submit">Ricerca</button>
-      </div>
-
-      <!-- area risultati -->
-      <div class="res_area">
+    <div class="res_area">
           
-          <ContentCardBox/>
+        <ContentCardBox/>
           
-      </div>
+    </div>
   </div>
 </template>
 

@@ -1,26 +1,35 @@
 <template>
 
-  <section class="card_box d-flex flex-wrap" v-if="!loadingPage">
-    <div v-for="items in itemsList" :key="items.id" class="col-3">
-    <ContentCard :info="items"/>
+  <section>
+      <!-- searchbar -->
+      <SearchBar/>
+    <div class="card_box d-flex flex-wrap" v-if="!loadingPage">
+      
+      <!-- card-area -->
+      <div v-for="items in itemsList" :key="items.id" class="col-3">
+        <ContentCard :info="items"/>
+      </div>
     </div>
-    
+
+    <!-- caricamento alternativa -->
+    <div v-else class="load d-flex justify-content-center align-items-center">
+    <h2>La Pirateria è REATO!</h2>
+    </div>
+
   </section>
 
-  <!-- caricamento alternativa -->
-  <section v-else class="load d-flex justify-content-center align-items-center">
-    <h2>La Pirateria è REATO!</h2>
-  </section>
   
 </template>
 
 <script>
 import ContentCard from '@/components/ContentCard.vue'
+import SearchBar from '@/components/SearchBar.vue'
 import axios from 'axios'
 export default {
   name: 'ContentCardBox',
   components: {
     ContentCard,
+    SearchBar
   },
   data(){
     return{
