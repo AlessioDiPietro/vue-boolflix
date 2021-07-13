@@ -10,7 +10,10 @@
             <h6><strong>Lingua:</strong></h6>
       <img :src="info.original_language == 'en' ? 'https://www.countryflags.io/gb/shiny/64.png':'https://www.countryflags.io/'+ info.original_language +'/shiny/64.png'">
           </li>
-          <li><h5><strong>Voto:</strong>{{info.vote_average}}</h5></li>
+          <li>
+            <h5><strong>Voto:</strong>{{info.vote_average}}</h5>
+            
+          </li>
         </ul>
 
       </div>  
@@ -33,9 +36,13 @@ export default {
 <style lang="scss" scoped>
 .info_text {
   z-index: 999;
-  bottom:0
+  bottom:0;
+  color: white;
   h6{
-      display: inline;
+    display: inline;
+  }
+  img {
+    display: inline
   }
 }
 </style>

@@ -12,6 +12,7 @@
                 </li>
                 <li>
                   <h5><strong>Voto:</strong>{{infoSeries.vote_average}}</h5>
+                  
                 </li>
               
           </ul>
@@ -39,9 +40,12 @@ export default {
 .info_text {
     z-index: 999;
     bottom:0; 
-    
+    color: white;
     h6{
         display: inline;
+    }
+    img {
+        display: inline
     }
 }
     
