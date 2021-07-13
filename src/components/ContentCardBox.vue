@@ -2,12 +2,12 @@
 
   <section>
       <!-- search bar -->
-      <SearchBar @inputSearch="filterBySearch"/>
-
       <!-- titolo -->
       <h1>Ultime Uscite</h1>
+      <SearchBar @inputSearch="filterBySearch"/>
 
-    <div class="card_box d-flex flex-wrap" v-if="!loadingPage">
+
+    <div class="card_box d-flex" v-if="!loadingPage">
       <!-- card-area -->
       <div v-for="items in filtredItems" :key="items.id" class="col-3">
         <ContentCard :info="items"/>
@@ -76,6 +76,7 @@ export default {
 .card_box {
   background-color: blanchedalmond;
   min-height: 300px;
+  overflow-x: scroll;
 }
 .load {
   background: rgb(4,8,8);

@@ -1,7 +1,7 @@
 <template>
 
-    <div class="box text-end my-5">
-          <input type="text" placeholder="Inserisci parola chiave.." @keyup.enter="$emit('inputSearch',searchText)" v-model.trim="searchText">
+    <div class="box text-end">
+          <input type="text" placeholder="ricerca tra le ultime uscite.." @keyup.enter="$emit('inputSearch',searchText)" v-model.trim="searchText">
 
           <button type="submit" @click.prevent="$emit('inputSearch',searchText)">Ricerca</button>
 
