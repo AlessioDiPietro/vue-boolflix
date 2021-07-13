@@ -4,7 +4,7 @@
       <h3><strong>Titolo:</strong>{{infoSeries.name}}</h3>
       <h5><strong>Titolo originale:</strong>{{infoSeries.original_title}}</h5>
       <h5><strong>Lingua:</strong>{{infoSeries.original_language}}</h5>
-      <img :src="flag ==='en'? enFlag : itFlag" alt="">
+      <img :src="flag ==='en'? enFlag : frFlag" alt="">
       <h5><strong>Voto:</strong>{{infoSeries.vote_average}}</h5>
       
       
@@ -19,7 +19,7 @@ export default {
         return{
             flag: "",
             enFlag: "https://image.flaticon.com/icons/png/512/197/197374.png",
-            itFlag:"https://as1.ftcdn.net/jpg/01/77/89/96/500_F_177899610_lBWg6Wbvwla4ypmmk0PZNwcadHozvb3X.jpg"
+            frFlag:"https://as1.ftcdn.net/jpg/01/77/89/96/500_F_177899610_lBWg6Wbvwla4ypmmk0PZNwcadHozvb3X.jpg"
         }
     },
     created:{
