@@ -52,7 +52,7 @@ export default {
       .then(response =>{
         this.itemsList = response.data.results;
         this.loadingPage = false;
-        console.log(this.itemsList);
+
       })
     },
     filterBySearch(searchText){

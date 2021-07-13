@@ -8,7 +8,7 @@
 
       <div>{{info.original_language}}</div>
 
-      <div>{{info.vote_avarage}}</div>
+      <div>{{info.vote_average}}</div>
 
       <!-- info -->
   </div>
