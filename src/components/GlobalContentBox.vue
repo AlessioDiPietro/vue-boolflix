@@ -28,6 +28,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.box-film {
+    background-color: green;
+    }
+.box-series {
+    background-color: purple;
+    }
 
 </style>
