@@ -9,7 +9,7 @@
 
     <!-- corpo pagina -->
     <main>
-      <Content :contentList="itemsMovieList"/>
+      <Content :contentList="itemsMovieList" :contentSeriesList="itemsSeriesList"/>
     </main>
 
 
@@ -37,17 +37,21 @@ export default {
   data(){
     return {
       dataSearchText: "",
-      apiUrl: "https://api.themoviedb.org/3/search/movie",
+      apiUrlMovie: "https://api.themoviedb.org/3/search/movie",
+      apiUrlSeries: "https://api.themoviedb.org/3/search/tv",
       apiKey: "3c2a6196907d164353ad9b7c59139463",
       language: "it-IT",
-      itemsMovieList : []
+      itemsMovieList : [],
+      itemsSeriesList : []
       
     }
   },
   methods: {
     resultSearch(text){
+      this.dataSearchText = text;
+
       axios
-      .get(this.apiUrl, {
+      .get(this.apiUrlMovie, {
         params: {
           api_key: this.apiKey,
           language: this.language,
@@ -58,7 +62,19 @@ export default {
         this.itemsMovieList = response.data.results
         console.log(this.itemsMovieList)
       })
-      this.dataSearchText = text
+
+      axios
+      .get(this.apiUrlSeries,{
+        params:{
+          api_key: this.apiKey,
+          language: this.language,
+          query: text
+        }
+      
+      })
+      .then(response =>{
+        this.itemsSeriesList = response.data.results
+      })
     }
   }
 }

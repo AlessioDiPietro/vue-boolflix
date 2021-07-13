@@ -10,9 +10,11 @@
     <!-- ricerca globale -->
     <div class="res_area_all">
 
-      <GlobalContentBox :films="contentList"/>
+      <GlobalContentBox :films="contentList" :series="contentSeriesList"/>
 
     </div>
+
+    
   </div>
 </template>
 
@@ -21,7 +23,7 @@ import ContentCardBox from '@/components/ContentCardBox.vue'
 import GlobalContentBox from '@/components/GlobalContentBox.vue'
 export default {
     name: "Content",
-    props: ["contentList"],
+    props: ["contentList", "contentSeriesList"],
     components: {
         ContentCardBox,
         GlobalContentBox
