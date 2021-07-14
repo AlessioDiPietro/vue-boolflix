@@ -2,7 +2,7 @@
   <div class="container-fluid bg-dark content_container -text-light p-5">
 
     <!-- ricerca ultimi usciti -->
-    <div class="res_area_last my-3">
+    <div class="res_area_last mb-5">
           
         <ContentCardBox/>
           

@@ -1,8 +1,11 @@
 <template>
-  <section>
-      <div class="box_film my-3">
+  <section class="box_film">
+      <div class="box_film my-3 d-flex">
           <h2>Risultati Film:</h2>
-          <GlobalContentCard :info="items" v-for="(items, index) in films" :key="index"/>
+          <div class="row">
+
+          <GlobalContentCard :info="items" v-for="(items, index) in films" :key="index" class="col-3"/>
+          </div>
           
       </div>
       <div class="box_series my-3">
@@ -32,12 +35,8 @@ h2 {
     font-weight: bolder;
     text-shadow: 1px 1px #FF0000;
     margin-bottom: 2rem;
+    border-bottom: 3px solid rgb(110, 6, 6);
+    display: inline-block;
 }
-.box-film {
-    background-color: green;
-    }
-.box-series {
-    background-color: purple;
-    }
 
 </style>

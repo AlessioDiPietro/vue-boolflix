@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss" >
-.box{
+.box_last{
   background-color: black;
   &:hover {
     img{
@@ -48,6 +48,7 @@ export default {
         h2{
           margin: 1rem 0;
           font-size: 25px;
+          color: rgb(235, 135, 135);
         }
       }
     }
