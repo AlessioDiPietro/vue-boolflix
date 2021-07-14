@@ -12,7 +12,7 @@
           </li>
           <li class="position-relative">
 
-            <h5><strong>Voto:</strong>
+            <h5><strong>Voto: {{info.vote_average}}</strong>
 
             <div class="static_star">
             <i class="fas fa-star" v-for="(itemsC, indexC) in 5" :key="indexC"></i>
@@ -21,6 +21,7 @@
             <div class="rated_star position-absolute top-50">
             <i class="fas fa-star text-warning" v-for="(itemsC, indexC) in voteData" :key="indexC"></i>
             </div>
+            
             
             </h5>
           </li>
@@ -36,7 +37,7 @@ export default {
   props:["info"],
   data(){
     return {
-      voteData: Math.ceil(this.info.vote_average*0.5),
+      voteData: Math.ceil(this.info.vote_average)*0.5,
       
     }
   },
