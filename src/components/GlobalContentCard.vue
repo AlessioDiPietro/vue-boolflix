@@ -10,9 +10,19 @@
             <h6><strong>Lingua:</strong></h6>
       <img :src="info.original_language == 'en' ? 'https://www.countryflags.io/gb/shiny/64.png':'https://www.countryflags.io/'+ info.original_language +'/shiny/64.png'">
           </li>
-          <li>
-            <h5><strong>Voto:</strong>{{info.vote_average}}</h5>
+          <li class="position-relative">
+
+            <h5><strong>Voto:</strong>
+
+            <div class="static_star">
+            <i class="fas fa-star" v-for="(itemsC, indexC) in 5" :key="indexC"></i>
+            </div>
+
+            <div class="rated_star position-absolute top-50">
+            <i class="fas fa-star text-warning" v-for="(itemsC, indexC) in voteData" :key="indexC"></i>
+            </div>
             
+            </h5>
           </li>
         </ul>
 
@@ -26,10 +36,14 @@ export default {
   props:["info"],
   data(){
     return {
+      voteData: Math.ceil(this.info.vote_average*0.5),
       
-      flagData: "en"
     }
-  }
+  },
+  
+  
+
+
 }
 </script>
 
