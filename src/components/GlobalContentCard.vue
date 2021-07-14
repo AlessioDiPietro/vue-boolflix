@@ -12,7 +12,7 @@
           </li>
           <li class="position-relative">
 
-            <h5><strong>Voto: {{info.vote_average}}</strong>
+            <h5><strong>Voto:</strong>
 
             <div class="static_star">
             <i class="fas fa-star" v-for="(itemsC, indexC) in 5" :key="indexC"></i>
