@@ -1,6 +1,6 @@
 <template>
   <div class="card-box  position-relative">
-      <img :src="info.poster_path == null ? 'https://cdn.browshot.com/static/images/not-found.png' : 'https://image.tmdb.org/t/p/w500/'+info.poster_path">
+      <img :src="info.poster_path == null ? 'https://cdn.browshot.com/static/images/not-found.png' : 'https://image.tmdb.org/t/p/w342/'+info.poster_path">
       <div class="info_text position-absolute">
 
         <ul>

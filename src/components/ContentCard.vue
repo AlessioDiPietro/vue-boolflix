@@ -1,14 +1,21 @@
 <template>
-  <div>
-      <img src="" alt="">
+  <div class="position-relative">
+      <img :src="info.poster_path == null ? 'https://cdn.browshot.com/static/images/not-found.png' : 'https://image.tmdb.org/t/p/w185/'+info.poster_path">
+      <div class="info_text position-absolute">
+        <ul>
+          <li><h2>{{info.title}}</h2></li>
+          <li>{{info.original_title}}</li>
+          <li>IMB: {{info.vote_average}}</li>
+        </ul>
 
-      <h2>{{info.title}}</h2>
+        
 
-      <div>{{info.original_title}}</div>
+        <div></div>
 
-      <div>{{info.original_language}}</div>
+        
 
-      <div>{{info.vote_average}}</div>
+        <div></div>
+      </div>
 
       <!-- info -->
   </div>
@@ -22,6 +29,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.info_text {
+  z-index: 999;
+  bottom:0;
+  color: white;
+
+}
 
 </style>
