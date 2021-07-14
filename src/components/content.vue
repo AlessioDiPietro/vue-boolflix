@@ -1,14 +1,14 @@
 <template>
-  <div class="container-fluid bg-dark content_container -text-light">
+  <div class="container-fluid bg-dark content_container -text-light p-5">
 
     <!-- ricerca ultimi usciti -->
-    <div class="res_area_last">
+    <div class="res_area_last my-3">
           
         <ContentCardBox/>
           
     </div>
     <!-- ricerca globale -->
-    <div class="res_area_all">
+    <div class="res_area_all my-3">
 
       <GlobalContentBox :films="contentList" :series="contentSeriesList"/>
 

@@ -1,6 +1,6 @@
 <template>
 
-  <section class="py-2">
+  <section>
       <!-- search bar -->
       <!-- titolo -->
       <h1>Ultime Uscite</h1>
@@ -9,8 +9,8 @@
 
     <div class="card_box d-flex" v-if="!loadingPage">
       <!-- card-area -->
-      <div v-for="items in filtredItems" :key="items.id" class="col-3">
-        <ContentCard :info="items"/>
+      <div v-for="items in filtredItems" :key="items.id" class="col">
+        <ContentCard :info="items" class="m-3"/>
       </div>
     </div>
 
@@ -73,6 +73,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 {
+  font-size: 40px;
+  font-weight: bolder;
+  text-shadow: 1px 1px #FF0000;
+  margin-bottom: 2rem;
+
+}
 .card_box {
   overflow-x: scroll;
 }
