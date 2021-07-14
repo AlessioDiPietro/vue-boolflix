@@ -4,8 +4,8 @@
       <div class="info_text position-absolute">
 
         <ul>
-          <li><h3><strong>Titolo:</strong>{{info.title}}</h3></li>
-          <li><h5><strong>Titolo originale:</strong>{{info.original_title}}</h5></li>
+          <li><h3><strong>Titolo:</strong>{{info.title == null? info.name : info.title}}</h3></li>
+          <li><h5><strong>Titolo originale:</strong>{{info.original_title == null? info.original_name : info.original_title}}</h5></li>
           <li>
             <h6><strong>Lingua:</strong></h6>
       <img :src="info.original_language == 'en' ? 'https://www.countryflags.io/gb/shiny/64.png':'https://www.countryflags.io/'+ info.original_language +'/shiny/64.png'">
