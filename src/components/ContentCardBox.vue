@@ -1,6 +1,6 @@
 <template>
 
-  <section>
+  <section class="py-2">
       <!-- search bar -->
       <!-- titolo -->
       <h1>Ultime Uscite</h1>
@@ -74,8 +74,6 @@ export default {
 
 <style lang="scss" scoped>
 .card_box {
-  background-color: blanchedalmond;
-  min-height: 300px;
   overflow-x: scroll;
 }
 .load {

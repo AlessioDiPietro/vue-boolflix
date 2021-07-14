@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="head d-flex justify-content-between align-items-center p-4">
+      <img src="https://image.flaticon.com/icons/png/512/249/249117.png" alt="boolfix">
       <SearchBar @inputSearch="resSearchText" />
   </div>
 </template>
@@ -26,6 +27,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.head {
+  height: 100px;
+  background-color: #1c1c1c;
+  img {
+    height: 100%;
+  }
+}
 
 </style>

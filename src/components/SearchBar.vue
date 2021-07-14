@@ -1,11 +1,11 @@
 <template>
 
-    <div class="box text-end">
-          <input type="text" placeholder="ricerca tra le ultime uscite.." @keyup.enter="$emit('inputSearch',searchText)" v-model.trim="searchText">
+    <div class="box m-2">
+          <input class="border-0 rounded-pill py-1 px-2 grey" type="text" placeholder="Ricerca tra le ultime uscite.." @keyup.enter="$emit('inputSearch',searchText)" v-model.trim="searchText">
 
-          <button type="submit" @click.prevent="$emit('inputSearch',searchText)">Ricerca</button>
+          <button class="btn btn-light mx-2" type="submit" @click.prevent="$emit('inputSearch',searchText)">Ricerca</button>
 
-          <button type="reset" @click.prevent="resetAll">Annulla</button>
+          <button type="reset" class="btn btn-danger" @click.prevent="resetAll">Annulla</button>
       </div>
   
 </template>
@@ -28,6 +28,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.grey {
+    color: gray;
+}
 
 </style>
