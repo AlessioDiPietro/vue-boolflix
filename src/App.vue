@@ -9,7 +9,7 @@
 
     <!-- corpo pagina -->
     <main>
-      <Content :contentList="itemsMovieList" :contentSeriesList="itemsSeriesList"/>
+      <Content :contentList="itemsMovieList" :contentSeriesList="itemsSeriesList" :textSearch="dataSearchText"/>
     </main>
 
 

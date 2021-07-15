@@ -10,7 +10,7 @@
     <!-- ricerca globale -->
     <div class="res_area_all my-3">
 
-      <GlobalContentBox :films="contentList" :series="contentSeriesList"/>
+      <GlobalContentBox :films="contentList" :series="contentSeriesList" :searchTxt="textSearch"/>
 
     </div>
 
@@ -23,7 +23,7 @@ import ContentCardBox from '@/components/ContentCardBox.vue'
 import GlobalContentBox from '@/components/GlobalContentBox.vue'
 export default {
     name: "Content",
-    props: ["contentList", "contentSeriesList"],
+    props: ["contentList", "contentSeriesList","textSearch"],
     components: {
         ContentCardBox,
         GlobalContentBox
