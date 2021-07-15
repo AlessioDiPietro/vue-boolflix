@@ -75,7 +75,7 @@ export default {
         padding: 0.5rem;
         li{
           list-style: none;
-          margin-bottom: 15px;
+          margin-bottom: 10px;
           h3 {
             color: #eb8787;
             font-size: 40px !important ;
