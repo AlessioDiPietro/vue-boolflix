@@ -4,8 +4,8 @@
       <div class="info_text position-absolute">
         <ul>
           <li><h2>{{info.title}}</h2></li>
-          <li>{{info.original_title}}</li>
-          <li>IMB: {{info.vote_average}}</li>
+          <li>"{{info.original_title}}"</li>
+          <li class="my-2"> <strong>IMDb:</strong>  {{voteData}}</li>
         </ul>
       </div>
 
@@ -16,14 +16,21 @@
 <script>
 export default {
     name: "contentCard",
-    props: ["info"]
-
+    props: ["info"],
+    data(){
+      return {
+        voteData: Math.ceil(this.info.vote_average)
+      }
+    }
 }
 </script>
 
 <style lang="scss" >
 .box_last{
   background-color: black;
+  strong {
+    color: rgb(224, 224, 20);
+  }
   &:hover {
     img{
       opacity: 0.2;

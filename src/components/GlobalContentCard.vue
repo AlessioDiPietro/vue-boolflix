@@ -18,7 +18,7 @@
           </li>
 
           <li class="position-relative">
-            <h6>Voto: </h6>
+            <h6 class="imbd">Voto: </h6>
             <div class="static_star">
               <i class="fas fa-star" v-for="(itemsC, indexC) in 5" :key="indexC"></i>
             </div>
@@ -26,6 +26,12 @@
             <div class="rated_star position-absolute bottom-0">
               <i class="fas fa-star text-warning" v-for="(itemsC, indexC) in voteData" :key="indexC"></i>
             </div>
+          </li>
+
+          <li>
+            <h6>Trama: </h6>
+            <span v-if="!info.overview == ''">{{info.overview}}</span>
+            <span v-else> //</span>
           </li>
         </ul>
       </div> 
@@ -69,7 +75,7 @@ export default {
         padding: 0.5rem;
         li{
           list-style: none;
-          margin-bottom: 18px;
+          margin-bottom: 15px;
           h3 {
             color: #eb8787;
             font-size: 40px !important ;
@@ -83,6 +89,13 @@ export default {
           }
           img {
             display: inline
+          }
+          span {
+            opacity: 0.7
+          }
+          .imbd {
+              color: #e0e014;
+            
           }
         }
       }
